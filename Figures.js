@@ -27,6 +27,9 @@ console.group("Triangles");
 //Perimeter
 //const Triangle_Perimeter = LadoTriangle1 + LadoTriangle2 + LadoTriangle3;
 function Triangle_Perimeter(Lado1, Lado2, Lado3){
+    Lado1=Number(Lado1);
+    Lado2=Number(Lado2);
+    Lado3=Number(Lado3);
     return Lado1 + Lado2 + Lado3;
 };
 
@@ -47,13 +50,13 @@ const P = Math.PI;
 // console.log(`Radius: ${Radius} cm, Diameter: ${Diameter} cm.`);
 //Perimeter
 // const Cirle_Perimeter = Diameter * P;
-function Cirle_Perimeter(Radius){
+function Circle_Perimeter(Radius){
     return 2 * P * Radius;
 };
 // console.log(`The circle's perimeter is ${Cirle_Perimeter}`);
 //Area
 // const Cirle_Area= P * Radius ** 2;
-function Cirle_Area(Radius){
+function Circle_Area(Radius){
     return P * Radius ** 2;
 };
 // console.log(`The circle's area is ${Cirle_Area} cm2`);
@@ -84,4 +87,48 @@ function CalculateSquareArea(){
      //console so, here we're going to set the alert.
      console.log(Area);
      alert(Area); 
+ };
+ function CalculateTrianglePerimeter(){
+    //The following command lets me obtain info from the input when we put the id we assigned
+    //before in the function argument.
+     const  input1 = document.getElementById("InputTriangle1");
+     const  input2 = document.getElementById("InputTriangle2");
+     const  input3 = document.getElementById("InputTriangle3");
+     
+     //But this is to get ALL the info, to get the value we need to use the following command
+     const value1 = input1.value;
+     const value2 = input2.value;
+     const value3 = input3.value;
+     //now we're going to show an alert
+     const Perimeter2 = Triangle_Perimeter(value1,value2,value3);
+     //normally the console.log shows something in console but we don't want the users see the 
+     //console so, here we're going to set the alert.
+     alert(Perimeter2);
+ };
+ function CalculateCircleArea(){
+    //The following command lets me obtain info from the input when we put the id we assigned
+    //before in the function argument.
+     const  input = document.getElementById("InputCircle");
+     //But this is to get ALL the info, to get the value we need to use the following command
+     const Radius = input.value;
+     //now we're going to show an alert
+     const Area = Circle_Area(Radius);
+     //normally the console.log shows something in console but we don't want the users see the 
+     //console so, here we're going to set the alert.
+     console.log(Area);
+     alert(Area); 
+ };
+ function CalculateCirclePerimeter(){
+    //The following command lets me obtain info from the input when we put the id we assigned
+    //before in the function argument.
+     const  input = document.getElementById("InputCircle");
+
+     //But this is to get ALL the info, to get the value we need to use the following command
+     const Radius = input.value;
+
+     //now we're going to show an alert
+     const Perimeter = Circle_Perimeter(Radius);
+     //normally the console.log shows something in console but we don't want the users see the 
+     //console so, here we're going to set the alert.
+     alert(Perimeter);
  };
