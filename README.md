@@ -11,4 +11,10 @@ This repository is to practice all my theorical knowledge adquired in practical 
 - Step 1: Define how to calculate percentages.
 - Step 2: Translate the formulas to JS.
 - Step 3: Create functions.
+- Step 4: Integrate JS with HTML.
+
+## Workshop #3: Average, mode and median
+- Step 1: Degine formulas to these data.
+- Step 2: Translate the formulas to JS.
+- Step 3: Create functions.
 - Step 4: Integrate JS with HTML. 

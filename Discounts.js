@@ -7,10 +7,23 @@ function Calculate_Price_With_Discount(Price, Discount){
 function onClickButtonPriceDiscount(){
     const inputPrice = document.getElementById("inputPrice");
     const valuePrice = inputPrice.value;
-    const inputDiscount = document.getElementById("inputDiscount");
-    const valueDiscount = inputDiscount.value;
+    const inputCoupon = document.getElementById("inputCoupon");
+    const valueCoupon = inputCoupon.value;
 
-    const Price_with_Discount = Calculate_Price_With_Discount(valuePrice,valueDiscount);
+    let Descuento;
+    
+    switch (valueCoupon){
+        case 'Cupon1':
+            Descuento=15;
+        break;
+        case 'Cupon2':
+            Descuento=30;
+        break;
+        case 'Cupon3':
+            Descuento=25;
+        break;
+    };
+    const Price_with_Discount = Calculate_Price_With_Discount(valuePrice,Descuento);
 
     const ResultPrice = document.getElementById("ResultPrice");
     ResultPrice.innerText = "Your final price is: $" + Price_with_Discount;
@@ -26,3 +39,10 @@ function onClickButtonPriceDiscount(){
 //     Percentage_with_Discount,
 //     Final_Price
 // });
+
+// Creamos array de cupones
+const coupons = [
+    'Cupon1',
+    'Cupon2',
+    'Cupon3'
+];
